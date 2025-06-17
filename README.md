@@ -18,4 +18,5 @@ git clone https://github.com/teu-user/q5-nasa-explorer.git
 cd q5
 npm install
 npm run dev
-
+```
+Abra http://localhost:3000 no seu navegador para ver o projeto rodando.
