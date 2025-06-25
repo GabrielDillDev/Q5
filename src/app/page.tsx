@@ -11,6 +11,10 @@ export default async function Home() {
       <section id="explore" className="py-16 px-4">
         <ApodCard data={data} />
       </section>
+      <section id="explore-sections" className="py-16 px-4">
+        <h2 className="text-4xl font-extrabold text-center text-white mb-8">Dive Into Space Exploration</h2>
+        <p className="text-center text-gray-300">Navigation categories coming soon!</p>
+      </section>
     </main>
   );
 }
