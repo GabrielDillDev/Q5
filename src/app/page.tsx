@@ -1,6 +1,7 @@
 import HeroSection from "../components/HeroSection";
 import ApodCard from "../components/ApodCard";
 import { getAstronomyPicture } from "../services/ApodService";
+import ExploreCategories from "../components/ExploreCategories";
 
 export default async function Home() {
   const data = await getAstronomyPicture();
@@ -12,8 +13,7 @@ export default async function Home() {
         <ApodCard data={data} />
       </section>
       <section id="explore-sections" className="py-16 px-4">
-        <h2 className="text-4xl font-extrabold text-center text-white mb-8">Dive Into Space Exploration</h2>
-        <p className="text-center text-gray-300">Navigation categories coming soon!</p>
+        <ExploreCategories /> 
       </section>
     </main>
   );
