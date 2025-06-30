@@ -1,20 +1,25 @@
 import HeroSection from "../components/HeroSection";
 import ApodCard from "../components/ApodCard";
-import { getAstronomyPicture } from "../services/ApodService";
 import ExploreCategories from "../components/ExploreCategories";
+import NeoOverviewCard from "../components/NeoOverviewCard";
+
+import { getAstronomyPicture } from "../services/ApodService";
+import { getNeoFeedOverview } from "../services/NeoService";
 
 export default async function Home() {
-  const data = await getAstronomyPicture();
+  const apodData = await getAstronomyPicture();
+  const neoData = await getNeoFeedOverview();
 
   return (
     <main className="min-h-screen bg-black text-white">
       <HeroSection />
       <section id="explore" className="py-16 px-4">
-        <ApodCard data={data} />
+        <ApodCard data={apodData} />
       </section>
       <section id="explore-sections" className="py-16 px-4">
         <ExploreCategories /> 
       </section>
+      <NeoOverviewCard data={neoData} />
     </main>
   );
 }
