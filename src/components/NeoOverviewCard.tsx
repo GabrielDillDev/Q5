@@ -1,4 +1,3 @@
-// components/NeoOverviewCard.tsx
 import { NeoOverviewData } from '../types/NeoTypes';
 import Link from 'next/link';
 
@@ -10,6 +9,7 @@ export default function NeoOverviewCard({ data }: NeoOverviewCardProps) {
   if (!data) {
     return (
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
+        <h2 className="text-4xl font-bold mb-8">Stay Alert: Near-Earth Asteroids</h2>
         <p>No asteroid data available for today. Check back tomorrow!</p>
       </section>
     );
@@ -17,12 +17,13 @@ export default function NeoOverviewCard({ data }: NeoOverviewCardProps) {
 
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black text-white">
+      <h2 className="text-4xl font-bold mb-8 text-center">Stay Alert: Near-Earth Asteroids</h2>
       <div className="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-xl p-8 flex flex-col md:flex-row items-center gap-6">
         <div className="flex-shrink-0 text-6xl md:text-8xl">
           {data.isHazardous ? '⚠️' : '☄️'}
         </div>
         <div className="text-center md:text-left">
-          <h2 className="text-3xl font-extrabold mb-2">Asteroid Alert: {data.name}</h2>
+          <h3 className="text-3xl font-extrabold mb-2">Asteroid Alert: {data.name}</h3>
           <p className="text-lg text-gray-300 mb-4">
             A near-Earth object approaching on {data.closeApproachDate}.
             <span className="block mt-2">
