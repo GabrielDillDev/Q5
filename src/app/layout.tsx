@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "../components/Header";
 
 export const metadata: Metadata = {
   title: "Q5 - NASA Explorer",
@@ -13,7 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-black text-white">
+        <Header />
         {children}
       </body>
     </html>
