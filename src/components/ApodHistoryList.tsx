@@ -21,7 +21,7 @@ const MIN_DATE = "1995-06-16";
 export default function ApodHistoryList({ initialData, initialStartDate, initialEndDate }: Props) {
   const [items, setItems] = useState(initialData);
   const [startDate, setStartDate] = useState(initialStartDate);
-  const [endDate, setEndDate] = useState(initialEndDate);
+  const [_endDate, setEndDate] = useState(initialEndDate);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [selectedImage, setSelectedImage] = useState<ApodData | null>(null);

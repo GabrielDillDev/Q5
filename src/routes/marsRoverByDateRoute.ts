@@ -15,7 +15,7 @@ export async function GET(request: Request) {
     const res = await fetch(`${BASE_URL}?earth_date=${date}&api_key=${API_KEY}`);
     const data = await res.json();
     return NextResponse.json(data.photos || []);
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json({ error: "Erro ao buscar dados da NASA" }, { status: 500 });
   }
 }
