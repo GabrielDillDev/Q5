@@ -11,7 +11,7 @@ const categories: CategoryCardProps[] = [
   {
     title: 'Mars Rover Expeditions',
     description: 'See the red planet through the eyes of Mars rovers.',
-    href: '/mars-rovers',
+    href: '/mars-rover',
     icon: '🤖',
   },
   {

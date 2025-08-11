@@ -14,7 +14,7 @@ export default function Header() {
           <Link href="/asteroids" className="hover:text-blue-400 transition">
             Asteroids
           </Link>
-          <Link href="/mars-rovers" className="hover:text-blue-400 transition">
+          <Link href="/mars-rover" className="hover:text-blue-400 transition">
             Mars Rovers
           </Link>
         </nav>
