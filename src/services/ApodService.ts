@@ -3,8 +3,7 @@ import { ApodData } from "../types/ApodTypes";
 const API_KEY = process.env.NASA_API_KEY;
 const BASE_URL = "https://api.nasa.gov/planetary/apod";
 
-const isServer = typeof window === "undefined";
-const BASE_API_URL = isServer ? "http://localhost:3000" : "";
+const BASE_API_URL = "";
 
 export async function getAstronomyPicture(): Promise<ApodData> {
   const res = await fetch(`${BASE_URL}?api_key=${API_KEY}`);
