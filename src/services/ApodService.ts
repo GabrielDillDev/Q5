@@ -22,9 +22,11 @@ export async function getApodByDate(date: string): Promise<ApodData> {
 }
 
 export async function getApodHistory(start: string, end: string): Promise<ApodData[]> {
-  const url = `${BASE_API_URL}/api/apod-history?start=${start}&end=${end}`;
+  const url = isServer
+    ? `${BASE_URL}?api_key=${API_KEY}&start_date=${start}&end_date=${end}`
+    : `${BASE_API_URL}/api/apod-history?start=${start}&end=${end}`;
+
   const res = await fetch(url);
   if (!res.ok) throw new Error("Erro ao carregar histórico");
-  const data = await res.json();
-  return data;
+  return res.json();
 }
